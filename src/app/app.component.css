@@ -432,6 +432,11 @@ p{
 		background-position: center, center;
 	}
 
+	.iconText
+	{
+		color:#03f8d7 !important;
+	}
+
 	#section10
 	{
 		/* background-color: #fff; */
