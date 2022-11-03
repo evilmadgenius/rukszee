@@ -25,6 +25,25 @@ export class AppComponent {
   ngOnInit(){
     (function ($) {
       $(document).ready(function () {
+          $("#unmuteButton").hide();
+          $("#musicButton").click(function(){
+            $("#myVideo")[0].play();
+          });
+
+          $("#muteButton").click(function(){
+            $("#muteButton").hide();
+            $("#unmuteButton").show();
+            $("#myVideo")[0].prop('muted', true);
+            
+          });
+
+          $("#unmuteButton").click(function(){
+            $("#unmuteButton").hide();
+            $("#muteButton").show();
+            $("#myVideo")[0].prop('muted', false);
+            
+          });
+          
           $('#pagepiling').pagepiling({
 
             //video
