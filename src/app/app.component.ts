@@ -25,6 +25,8 @@ export class AppComponent {
   ngOnInit(){
     (function ($) {
       $(document).ready(function () {
+          //$("#pp-nav")[0].css('visibility', 'hidden');
+          $("#menu").css('visibility', 'hidden');
           $("#unmuteButton").hide();
           $("#musicButton").click(function(){
             $("#myVideo")[0].play();
@@ -43,17 +45,29 @@ export class AppComponent {
             $("#myVideo")[0].prop('muted', false);
             
           });
+
+          $("#musicButtonBottom ").click(function(){
+            console.log("clicked");
+            //$("#coverButton").remove();
+            // $("#pp-nav")[0].css('visibility', 'visible');
+            // $("#pagepiling").css('visibility', 'visible');
+            $("#menu").css('visibility', 'visible');
+            $("#landingHref")[0].click()
+            $("#myVideo")[0].play();
+            
+          });
+          
           
           $('#pagepiling').pagepiling({
 
             //video
 
             menu: '#menu',
-            anchors: ['Engaged', 'Sangeet', 'HaldiMehendi','Nikaah','Waleema'],            
+            anchors: ['YouAreInvited','Engaged', 'Sangeet', 'HaldiMehendi','Nikaah','Waleema','RSVP'],            
             sectionsColor: ['#bfda00', '#2ebe21', '#2C3E50', '#51bec4'],
             navigation: {
               'position': 'right',
-              'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4', 'Page 5']              
+              'tooltips': ['Page 0','Page 1', 'Page 2', 'Page 3', 'Page 4', 'Page 5','Page 6']              
             },
             afterRender: function(){
               //playing the video
